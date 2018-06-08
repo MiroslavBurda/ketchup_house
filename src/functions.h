@@ -210,10 +210,10 @@ void data_z_druhe_megy()
             a = Serial3.read();
             if(( a != 128) and (x==0) ) 
                 x = -1; // snizim x o 1 
-            Serial.print(a, DEC);
+           /* Serial.print(a, DEC);
             Serial2.print(a, DEC);
             Serial.print(" ");
-            Serial2.print(" ");
+            Serial2.print(" ");*/
             if(x== 1)
             {
                 us_1 = a;
@@ -283,20 +283,20 @@ void data_z_druhe_megy()
        
     }    
     Serial2.println(" ");
-    Serial.print(" us_1  ");    
+ /*   Serial.print(" us_1  ");    
     Serial.print(us_1 );
     Serial.print(" us_2  ");
     Serial.print(us_2);
     Serial.print(" us_3  ");
     Serial.print(us_3);
     Serial.print(" us_4  "); 
-    Serial.print(us_4);
+    Serial.print(us_4);*/
     Serial.print(" enc_l  ");
     Serial.print(enc_l);
     Serial.print(" enc_r  ");
     Serial.print(enc_r); 
     Serial.print(" ");  
-    Serial.print(docasny_r, DEC);
+    // Serial.print(docasny_r, DEC);
     Serial.println("  ");
 }
 

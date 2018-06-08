@@ -118,7 +118,7 @@ void loop()
     ++ pocet_cyklu;
     Serial.println("****************************");
     Serial2.println("****************************");
-   /* Serial.print("pocet ");
+    Serial.print("pocet ");
     Serial2.print("pocet ");
     Serial.print(pocet_cyklu);
     Serial2.print(pocet_cyklu);
@@ -127,5 +127,5 @@ void loop()
     Serial.print( (millis()-zacatek) );
     Serial2.print( (millis() - zacatek) );
     Serial.println( );
-    Serial2.println( );*/
+    Serial2.println( );
 }
