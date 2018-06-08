@@ -1,5 +1,6 @@
 // zeleny 1.68 k modry 10 k 
 // souradnice 0,0 je levy dolni roh 
+// jedno cteni z wb senzoru je 0,35 ms, jeden ultrazvuk podle vzdálenosti, cca 1cm odpovida 1 ms
 
 #include <Arduino.h>
 #include <Servo.h>     //zahrnutí knihovny pro ovládání servo motoru 

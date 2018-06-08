@@ -280,17 +280,18 @@ void jizda_rovne(uint8_t V ) // rychlost se udává v cm/s
         V2 = -V2;
         motorGo(MOTOR_2, 0, V2 ); 
     }
-    Serial.print("enc_final_r ");
+    Serial.print("Rovne: ");
+    Serial.print(" enc_final_r ");
     Serial.print(enc_final_r );
-    Serial.print("enc_final_l ");
+    Serial.print(" enc_final_l ");
     Serial.print(enc_final_l );
-    Serial.print("enc_l ");
+    Serial.print(" enc_l ");
     Serial.print(enc_l );
-    Serial.print("enc_r ");
+    Serial.print(" enc_r ");
     Serial.print(enc_r );
-    Serial.print("V1  ");
+    Serial.print(" V1  ");
     Serial.print(V1);
-    Serial.print("V2  "); 
+    Serial.print(" V2  "); 
     Serial.print(V2);
     Serial.print(" plynulost  "); 
     Serial.println(plynulost);
@@ -339,6 +340,21 @@ void jizda_lehce_leva(uint8_t V, float pomer_l ) // rychlost se udává v cm/s
         V2 = -V2;
         motorGo(MOTOR_2, 0, V2 ); 
     }
+    Serial.print("Jizda leva: ");
+    Serial.print(" enc_final_r ");
+    Serial.print(enc_final_r );
+    Serial.print(" enc_final_l ");
+    Serial.print(enc_final_l );
+    Serial.print(" enc_l ");
+    Serial.print(enc_l );
+    Serial.print(" enc_r ");
+    Serial.print(enc_r );
+    Serial.print(" V1  ");
+    Serial.print(V1);
+    Serial.print(" V2  "); 
+    Serial.print(V2);
+    Serial.print(" plynulost  "); 
+    Serial.println(plynulost);
     
 }
 void jizda_lehce_prava(uint8_t V, float pomer_r ) // rychlost se udává v cm/s , cim vetsi pomer_r, tim ostrejsi zatacka
@@ -385,6 +401,21 @@ void jizda_lehce_prava(uint8_t V, float pomer_r ) // rychlost se udává v cm/s 
         V2 = -V2;
         motorGo(MOTOR_2, 0, V2 ); 
     }
+    Serial.print("Jizda prava: ");
+    Serial.print(" enc_final_r ");
+    Serial.print(enc_final_r );
+    Serial.print(" enc_final_l ");
+    Serial.print(enc_final_l );
+    Serial.print(" enc_l ");
+    Serial.print(enc_l );
+    Serial.print(" enc_r ");
+    Serial.print(enc_r );
+    Serial.print(" V1  ");
+    Serial.print(V1);
+    Serial.print(" V2  "); 
+    Serial.print(V2);
+    Serial.print(" plynulost  "); 
+    Serial.println(plynulost);
 }
 
 void jizda_po_care() 

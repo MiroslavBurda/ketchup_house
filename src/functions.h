@@ -420,6 +420,6 @@ void data_z_wb()
     Serial.print(" wb7 ");
     Serial.print(analogRead(wb7));
     Serial.print(" wb6 ");
-    Serial.print(analogRead(wb6));
+    Serial.println(analogRead(wb6));
 
 }
