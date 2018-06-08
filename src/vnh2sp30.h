@@ -254,13 +254,17 @@ void jizda_rovne(uint8_t V ) // rychlost se udává v cm/s
     V2 = (V + plynulost );
     
     if( V1 > 255)
-    {
         V1 = 255;
-    }
+    
     if( V2 > 255)
-    {
         V2 = 255;
-    }
+
+    if( V1 < -255)
+        V1 = -255;
+
+    if( V2 < -255)
+        V2 = -255;
+
     
     if( V1 >= 0 )
     {
@@ -314,13 +318,16 @@ void jizda_lehce_leva(uint8_t V, float pomer_l ) // rychlost se udává v cm/s
     V2 = (V + plynulost );
     
     if( V1 > 255)
-    {
         V1 = 255;
-    }
+    
     if( V2 > 255)
-    {
         V2 = 255;
-    }
+    
+     if( V1 < -255)
+        V1 = -255;
+
+    if( V2 < -255)
+        V2 = -255;
     
     if( V1 >= 0 )
     {
@@ -375,13 +382,16 @@ void jizda_lehce_prava(uint8_t V, float pomer_r ) // rychlost se udává v cm/s 
     V2 = (V + plynulost );
     
     if( V1 > 255)
-    {
         V1 = 255;
-    }
+    
     if( V2 > 255)
-    {
         V2 = 255;
-    }
+    
+    if( V1 < -255)
+        V1 = -255;
+
+    if( V2 < -255)
+        V2 = -255;
     
     if( V1 >= 0 )
     {

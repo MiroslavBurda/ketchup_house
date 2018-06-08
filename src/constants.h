@@ -21,15 +21,6 @@ int X = 3;
 int NZ = 2; // Nekdo Zavazi
 
 //ultrazvuk
-const int pTrig_bok = A7;
-const int pEcho_bok = A6;
-const int pTrig_vlevo = 32;
-const int pEcho_vlevo = 52;
-const int pTrig_stred = 48;
-const int pEcho_stred = 49;
-const int pTrig_vpravo = 14;
-const int pEcho_vpravo = 15;
-
 int us_1;
 int us_2;
 int us_3;
@@ -44,7 +35,7 @@ Servo myservo;
 // myservo.attach(46); tohle je az u tanecku, aby se servo nezacalo tocit predcasne
 
 bool lastState = false;  
-int rychlost = 60;
+int rychlost = 80;
 int rychlost_2 = 70;
 long zac;
 // motora

@@ -13,16 +13,7 @@ pinMode(wb4, INPUT);
 pinMode(wb5, INPUT);
 pinMode(wb6, INPUT);
 pinMode(wb7, INPUT);
-
-//ultrazvuk
-pinMode(pTrig_bok,OUTPUT);
-pinMode(pEcho_bok,INPUT);
-pinMode(pTrig_vlevo,OUTPUT);
-pinMode(pEcho_vlevo,INPUT);
-pinMode(pTrig_stred,OUTPUT);
-pinMode(pEcho_stred,INPUT);
-pinMode(pTrig_vpravo,OUTPUT);
-pinMode(pEcho_vpravo,INPUT);  
+  
 
 // tlačítko 1 
 pinMode(t1, INPUT_PULLUP); // při stisku je LOW
@@ -30,10 +21,5 @@ pinMode(t1, INPUT_PULLUP); // při stisku je LOW
 // dioda 
 pinMode(d_or, OUTPUT);  // svítí, když je LOW 
 digitalWrite(d_or,HIGH);  // na začátku programu LED nesvítí 
-
-X = 1; // počáteční pozice ve čtverci 
-Y = 0;
-
-
 
 motorSetup();

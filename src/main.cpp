@@ -25,7 +25,8 @@ void setup()
     wait_for_button(t1); // čeká na stisk tlačítka
     delay(500);  // na oddělání ruky
     //srovnat_s_carou();
-    Forward(80);
+    Forward(rychlost);
+    delay(100000);
     zacatek = millis();
 }
 
