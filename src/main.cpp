@@ -32,47 +32,8 @@ void loop()
 {    
     data_z_druhe_megy();
     blikani();
-
-    if( ( analogRead(wb6) > wb6_prumer ) && ( souradnicovy_driver == 1 ) )
-    {
-        if( na_souradnici == 1 ) // na kladném smeru osy X
-        {
-            ++X;
-            Serial.print(" X ");
-            Serial.print(X);
-            Serial.print(" Y ");
-            Serial.println(Y);
-            souradnicovy_driver = 0;
-        }
-        if( na_souradnici == 2 ) // na kladnám smeru osy Y
-        {
-            ++Y;
-            Serial.print(" X ");
-            Serial.print(X);
-            Serial.print(" Y ");
-            Serial.println(Y);
-            souradnicovy_driver = 0;
-        }
-        if( na_souradnici == 3 ) // na záporném smeru osy X
-        {
-            --X;
-            Serial.print(" X ");
-            Serial.print(X);
-            Serial.print(" Y ");
-            Serial.println(Y);
-            souradnicovy_driver = 0;
-        }   
-        if( na_souradnici == 4 ) // na záporném smeru osy X
-        {
-            --Y;
-            Serial.print(" X ");
-            Serial.print(X);
-            Serial.print(" Y ");
-            Serial.println(Y);
-            souradnicovy_driver = 0;
-        }
-        for(uint8_t i=0; i<4; i++) Serial.println();
-    }
+    souradnice();
+    
     if( analogRead(wb6) < wb6_prumer )
     {
         souradnicovy_driver = 1;   
