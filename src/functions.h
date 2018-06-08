@@ -297,7 +297,7 @@ void data_z_druhe_megy()
     Serial.print(enc_r); 
     Serial.print(" ");  
     // Serial.print(docasny_r, DEC);
-    Serial.println("  ");
+    // Serial.println("  ");
 }
 
 void dance()
@@ -405,3 +405,21 @@ void souradnice()
     }
 }
 
+void data_z_wb()
+{
+    Serial.print(" wb1 ");
+    Serial.print(analogRead(wb1));
+    Serial.print(" wb2 ");
+    Serial.print(analogRead(wb2));
+    Serial.print(" wb3 ");
+    Serial.print(analogRead(wb3));
+    Serial.print(" wb4 ");
+    Serial.print(analogRead(wb4));
+    Serial.print(" wb5 ");
+    Serial.print(analogRead(wb5));
+    Serial.print(" wb7 ");
+    Serial.print(analogRead(wb7));
+    Serial.print(" wb6 ");
+    Serial.print(analogRead(wb6));
+
+}

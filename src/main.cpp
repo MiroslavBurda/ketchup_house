@@ -31,6 +31,7 @@ void setup()
 void loop() 
 {    
     data_z_druhe_megy();
+    data_z_wb();
     blikani();
     souradnice();
             
