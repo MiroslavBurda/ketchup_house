@@ -359,7 +359,7 @@ void blikani()
 
 void souradnice()
 {
-if( ( analogRead(wb6) > wb6_prumer ) && ( souradnicovy_driver == 1 ) )
+    if( ( analogRead(wb6) > wb6_prumer ) && ( souradnicovy_driver == 1 ) )
     {
         if( na_souradnici == 1 ) // na kladném smeru osy X
         {
@@ -398,6 +398,10 @@ if( ( analogRead(wb6) > wb6_prumer ) && ( souradnicovy_driver == 1 ) )
             souradnicovy_driver = 0;
         }
         for(uint8_t i=0; i<4; i++) Serial.println();
+    }
+     if( analogRead(wb6) < wb6_prumer )
+    {
+        souradnicovy_driver = 1;   
     }
 }
 

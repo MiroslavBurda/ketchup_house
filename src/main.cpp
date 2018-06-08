@@ -33,28 +33,19 @@ void loop()
     data_z_druhe_megy();
     blikani();
     souradnice();
-    
-    if( analogRead(wb6) < wb6_prumer )
-    {
-        souradnicovy_driver = 1;   
-    }
             
-    if( ( ( ( 1 <= X ) && ( X < 5 ) ) && ( Y == 0 ) ) && ( povoleni_k_jizde = 1 ) )
-    {  // jizda vpred po spodni rade 
-        jizda_po_care();
-    }
-    if( ( ( ( 1 <= Y ) && ( Y < NZ ) ) && ( X == 6 ) ) && ( povoleni_k_jizde = 1 ) )
-    {     // jizda nahoru po pravem okraji 
-        jizda_po_care();
-    }
+    if( ( ( ( 1 <= X ) && ( X < 5 ) ) && ( Y == 0 ) ) && ( povoleni_k_jizde = 1 ) )  
+        jizda_po_care(); // jizda vpred po spodni rade 
+    
+    if( ( ( ( 1 <= Y ) && ( Y < NZ ) ) && ( X == 6 ) ) && ( povoleni_k_jizde = 1 ) )    
+        jizda_po_care();  // jizda nahoru po pravem okraji 
+    
     if( ( ( ( 1 < X ) && ( X <= 5 ) ) && ( Y == (NZ + 1) ) ) && ( povoleni_k_jizde = 1 ) )
-    {
         jizda_po_care();
-    }
+    
     if( ( ( ( 1 < Y ) && ( Y <= NZ ) ) && ( X == 0 ) ) && ( povoleni_k_jizde = 1 ) )
-    {
         jizda_po_care();
-    }
+        
     if( (( X == 5 ) && ( Y == 0 )) || (( X == 0 ) && ( Y == 1 )) || (( X == 6 ) && ( Y == NZ )) || (( X == 1 ) && ( Y == (NZ + 1) )) )
     {   // zataci  
         Serial.print( "right_encoder " );
@@ -64,17 +55,12 @@ void loop()
         if( driver_zataceni == 1 )
         {
             tvrdy_Stop(1);
+            delay(10);
             right_encoder = enc_r;
             driver_zataceni = 0;
         }
-        if(analogRead(wb6) > wb6_prumer)
-        {
-            Stop(2);
-        }
-        if( ( enc_r - right_encoder) < 900 ) // 454 na jednu otáčku kola 
-        {
-            motorGo(MOTOR_2, CW, 80);
-        }
+        motorGo(MOTOR_2, CW, 80);
+
         if( ( enc_r - right_encoder) >= 900)
         {
             Stop(3);
