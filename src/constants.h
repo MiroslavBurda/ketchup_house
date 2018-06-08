@@ -91,3 +91,5 @@ bool driver_zataceni = 1;
 
 int minula_predni_wb;
 int minula_zadni_wb;
+int docasna_minula_predni_wb;
+int docasna_minula_zadni_wb;

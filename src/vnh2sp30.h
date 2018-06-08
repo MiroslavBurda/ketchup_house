@@ -402,7 +402,7 @@ void jizda_po_care()
             nastaveni_enc = 1;
             hc = 1;
         }        
-        jizda_lehce_leva(rychlost, 2);
+        jizda_lehce_leva(rychlost, 2.5);
     }
     if( analogRead(wb2) > wb2_prumer )
     {
@@ -414,7 +414,7 @@ void jizda_po_care()
                 nastaveni_enc = 1;
                 hc = 1;
             }
-            jizda_lehce_prava(rychlost, 1.5 );
+            jizda_lehce_prava(rychlost, 2 );
         } 
         if( analogRead(wb5) > wb5_prumer ) 
         {    // jizda rovne 
@@ -432,7 +432,7 @@ void jizda_po_care()
                 nastaveni_enc = 1;
                 hc = 1;
             }
-            jizda_lehce_leva(rychlost, 1.5 );
+            jizda_lehce_leva(rychlost, 2 );
         } 
     }
     if(( analogRead(wb3) > wb3_prumer) && ( analogRead(wb2) < wb2_prumer ) )
@@ -442,13 +442,13 @@ void jizda_po_care()
             nastaveni_enc = 1;
             hc = 1;
         }
-        jizda_lehce_prava(rychlost, 2 );
+        jizda_lehce_prava(rychlost, 2.5 );
     }
     if( ( analogRead(wb1) < wb1_prumer ) && ( analogRead(wb2) < wb2_prumer ) && ( analogRead(wb3) < wb3_prumer ) )
     {  // hledame ztracenou caru - zadny predni senzor nevidi caru 
         if( minula_predni_wb == 1 )
         {
-            jizda_lehce_leva(rychlost, 3 );
+            jizda_lehce_leva(rychlost, 4 );
             if( hc == 1 )
             {
                 nastaveni_enc = 1;  
@@ -457,7 +457,7 @@ void jizda_po_care()
         }
         if( minula_predni_wb == 3 )
         {
-            jizda_lehce_prava(rychlost, 3 );
+            jizda_lehce_prava(rychlost, 4 );
             if( hc == 1 )
             {
                 nastaveni_enc = 1;  

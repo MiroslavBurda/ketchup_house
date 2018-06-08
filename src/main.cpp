@@ -64,7 +64,6 @@ void loop()
         if( ( enc_r - right_encoder) >= 900)
         {
             Stop(3);
-            srovnat_s_carou();
             nastaveni_enc = 1;
             driver_zataceni = 1;
             if(( X == 5 ) && ( Y == 0 ))

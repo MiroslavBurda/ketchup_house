@@ -31,7 +31,7 @@ pinMode(t1, INPUT_PULLUP); // při stisku je LOW
 pinMode(d_or, OUTPUT);  // svítí, když je LOW 
 digitalWrite(d_or,HIGH);  // na začátku programu LED nesvítí 
 
-X = 3; // počáteční pozice ve čtverci 
+X = 1; // počáteční pozice ve čtverci 
 Y = 0;
 
 
