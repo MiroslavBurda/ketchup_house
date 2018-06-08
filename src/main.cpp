@@ -31,22 +31,7 @@ void setup()
 void loop() 
 {    
     data_z_druhe_megy();
-
-    jizda_rovne(rychlost );
-
-    if( (millis() - zac) > 500) // blikani prubezne
-    {
-        zac = millis();
-        if (lastState == true)  
-        {
-            lastState = false;
-        }
-        else 
-        {
-            lastState = true;
-            digitalWrite(d_or, lastState);
-        }
-    }    
+    blikani();
 
     if( ( analogRead(wb6) > wb6_prumer ) && ( souradnicovy_driver == 1 ) )
     {
@@ -86,6 +71,7 @@ void loop()
             Serial.println(Y);
             souradnicovy_driver = 0;
         }
+        for(uint8_t i=0; i<4; i++) Serial.println();
     }
     if( analogRead(wb6) < wb6_prumer )
     {

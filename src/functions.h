@@ -337,3 +337,22 @@ void dance()
     wait_for_button(t1); // čeká na start
     
 }
+
+void blikani()
+{
+    if( (millis() - zac) > 500) // blikani prubezne
+    {
+        zac = millis();
+        if (lastState == true)  
+        {
+            lastState = false;
+        }
+        else 
+        {
+            lastState = true;
+            digitalWrite(d_or, lastState);
+        }
+    }    
+
+
+}
